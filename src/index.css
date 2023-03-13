@@ -1,0 +1,110 @@
+/*  - primary dark 
+  # - secondary light
+*/
+:root {
+    --primary-color: #0FC9E7;
+    --secondary-color: #FCFCFC;
+  }
+
+  * {
+    background-color: var(--secondary-color);
+  }
+
+
+ .add-btn {
+    display: flex;
+    justify-content: center ;
+ }
+
+
+.add-btn > button {
+    width : 50vw ;
+    
+   
+    padding: 10px 0;
+   background-color: var(
+    --primary-color
+   );
+   border-radius: 15px;
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: bold;
+    border-color: #FCFCFC;
+}
+
+.logo-img {
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+}
+
+.search-container {
+    width: 100vw;
+    display: flex ;
+    justify-content: center;
+    margin-left: -10px;
+}
+.search-container > input {
+    width: 50vw;
+    padding: 10px 0px;
+    padding-left: 10px;
+    margin: 10px 0;
+    border-radius: 15px;
+}
+input[type="search"] {
+   background-image: url(./assets/search.png);
+    background-size: 16px 16px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 30px; 
+  }
+
+  .ListItem {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    justify-content: space-around;
+    margin: 0 auto;
+    gap: 10px;
+    background-color: #ffffff ;
+    box-shadow: 0 2.5px 25px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 22px;
+  }
+
+  .ListItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2.5px 40px 0 rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+  }
+
+  .ListItem > img {
+   width: 75px;
+   height: 75px;
+   margin-left: 10px;
+  }
+
+ .btn-row > button {
+  
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+ .btn-row > button:hover {
+   transform: scale(1.05);
+   box-shadow: 0 2.5px 40px 0 rgba(0, 0, 0, 0.30);
+  }
+ 
+ .contact-detail > p{
+  margin-top: -11px;
+ }
+ .contact-detail > h3{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500;
+  font-size: 23px;
+ }
+
+
+  
+  
