@@ -1,32 +1,33 @@
-import React from 'react'
-import {userImg} from '../assets'
-import {edit} from '../assets'
-import {trash} from '../assets'
+import React from 'react';
+import { userImg, trash } from '../assets';
+import EditContact from './EditContact';
 
-const ListItem = () => {
+const ListItem = ({ ContactName, ContactNumber , getContactId , contact , updateContact, deleteContact}) => {
+
+  const updatehandler = (id) => {
+    getContactId(id); 
+  }
+
+  const deleteHandler = (id) => {
+    deleteContact(id);
+  }
   return (
     <>
-     <div className="ListItem">
-        <img src= {userImg}  alt="" srcset="" />
+      <div className="ListItem">
+        <img src={userImg} alt="" srcSet="" />
         <div className="contact-detail">
-          <h3>Alok Singh</h3>
-          <p> 9016339469</p>
+          <h3>{ContactName}</h3>
+          <p>{ContactNumber}</p>
         </div>
         <div className="btn-row">
-          <button>
-            <img src={edit} alt="" srcset="" />
-            </button>
-            <button>
-                 <img src={trash} alt="" srcset="" />
-            </button>
+          <button onClick={() => deleteHandler(contact.id)}>
+            <img src={trash} alt="" srcSet="" />
+          </button>
         </div>
-     </div>
-     
-
-
-    
+        <EditContact updatehandler={updatehandler} contact={contact} updateContact={updateContact}/>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ListItem
+export default ListItem;

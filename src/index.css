@@ -33,13 +33,13 @@
 }
 
 .logo-img {
-   width: 100vw;
+  
    display: flex;
    justify-content: center;
 }
 
 .search-container {
-    width: 100vw;
+   
     display: flex ;
     justify-content: center;
     margin-left: -10px;
@@ -62,7 +62,7 @@ input[type="search"] {
   .ListItem {
     display: flex;
     align-items: center;
-    width: 25vw;
+    width: 50%;
     justify-content: space-around;
     margin: 0 auto;
     gap: 10px;
@@ -72,11 +72,11 @@ input[type="search"] {
     margin-bottom: 22px;
   }
 
-  .ListItem:hover {
+  /* .ListItem:hover {
     transform: scale(1.05);
     box-shadow: 0 2.5px 40px 0 rgba(0, 0, 0, 0.18);
     cursor: pointer;
-  }
+  } */
 
   .ListItem > img {
    width: 75px;
@@ -105,6 +105,82 @@ input[type="search"] {
   font-size: 23px;
  }
 
+ .addContactForm {
+  
+  z-index: 2;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  height: 30%;
+  width: 30%; 
+  overflow: auto; 
+  margin: auto; 
+  position: absolute; 
+  top: 0; left: 0; bottom: 0; right: 0; 
+}
+ .addContactForm > form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
+ .editContactForm {
+  z-index: 3;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.2);
+  height: 30%;
+  width: 30%; 
+  overflow: auto; 
+  margin: auto; 
+  position: absolute; 
+  top: 0; left: 0; bottom: 0; right: 0; 
+  
+}
+ .editContactForm > form{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  
+}
 
+.btnContainer > button{
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: var(--primary-color);
+}
+.btnContainer > button:hover {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+ 
+#name , #mob {
+  width: 200px;
+  height: 20px;
+}
   
-  
+@media (max-width: 768px) {
+  .ListItem {
+    width:90%;
+  }
+  .logo-img img {
+    width: 90%;
+  }
+  .addContactForm , .editContactForm {
+    height: 40%;
+    width: 65%;
+  }
+}
